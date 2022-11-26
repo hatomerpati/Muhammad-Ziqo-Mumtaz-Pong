@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,4 +43,18 @@ public class PaddleController : MonoBehaviour
         rig.velocity = movement;
     }
 
+    public void ActivatePUPaddleUp(){
+        transform.localScale = new Vector3(1.0f, 4.5f, 1.0f);
+    }
+
+    public void ActivatePUSpeedUp(float magnitude)
+    {
+        rig.velocity *= magnitude;
+    }
+
+
+    internal void ActivatePUPaddleSpeed()
+    {
+        rig.velocity *= 1;
+    }
 }
